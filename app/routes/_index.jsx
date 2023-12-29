@@ -8,9 +8,8 @@ export const meta = () => {
 export default function Index() {
 	return (
 		<div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-			<h1>Hello World</h1>
-			<a href="/user-db">User List (DB)</a>
-			<a href="/user-static">User List (Static)</a>
+			<h1>Home</h1>
+			<a href="/users">User List</a><br/> 
 		</div>
 	);
 }
