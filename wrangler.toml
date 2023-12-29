@@ -1,0 +1,7 @@
+name = "remix-cloudflare-demo"
+compatibility_date = "2023-09-18"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "demo"
+database_id = "eac7c368-9a73-43e1-8762-28dce0458fd2"
