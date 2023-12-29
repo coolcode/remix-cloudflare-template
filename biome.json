@@ -1,0 +1,60 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.4.0/schema.json",
+	"files": {
+		"include": [
+			"*.js",
+			"*.jsx",
+			"*.mjs",
+			"*.cjs"
+		],
+		"ignore": [
+			".netlify/**",
+			"node_modules",
+			"public",
+			"functions",
+			"styles",
+			"*.json"
+		]
+	},
+	"formatter": {
+		"indentStyle": "space",
+		"indentWidth": 2
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"semicolons": "asNeeded",
+			"lineEnding": "lf",
+			"lineWidth": 160,
+			"bracketSameLine": true,
+			"bracketSpacing": true,
+			"trailingComma": "es5"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"style": {
+				"noNonNullAssertion": "off",
+				"noUselessElse": "off",
+				"useSelfClosingElements": "off"
+			},
+			"a11y": {
+				"useButtonType": "off",
+				"useKeyWithClickEvents": "off",
+				"noSvgWithoutTitle": "off"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "off",
+				"noAssignInExpressions": "off"
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	}
+}
