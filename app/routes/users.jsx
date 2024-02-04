@@ -27,24 +27,33 @@ export async function loader({ context }) {
 export default function Users() {
   const data = useLoaderData()
   return (
-    <div>
-      <h1>Users</h1>
-      <ul>
+    <div className="space-y-4">
+      <h1 className="text-4xl">Create</h1>
+      <Form method="post" className="">
+        <div className="mb-4">
+          <label className="label">Name</label>
+          <input className="w-100 text mt-2 text-xl" type="text" name="id" placeholder="user id" />
+        </div>
+        <div className="mb-4">
+          <label className="label">Words</label>
+          <input className="w-100 text mt-2 text-xl" type="text" name="name" placeholder="user name" />
+        </div>
+        <button className="button primary text-xl" type="submit">
+          Create User
+        </button>
+      </Form>
+      <hr />
+      <h1 className="text-4xl">Users</h1>
+      <ul className="mt-4">
         {data.map((user) => (
-          <li key={user.id}>
-            {user.id},&nbsp;<a href={`/user/${user.id}`}>{user.name}</a>
+          <li className="py-2" key={user.id}>
+            <span className="">#{user.id}</span>
+            <a className="ml-4 border-b-2 border-primary-500" href={`/user/${user.id}`}>
+              {user.name}
+            </a>
           </li>
         ))}
       </ul>
-      <h1>New</h1>
-      <Form method="post">
-        <input type="text" name="id" placeholder="user id" />
-        <br />
-        <input type="text" name="name" placeholder="user name" />
-        <br />
-        <button type="submit">Create User</button>
-      </Form>
-      <a href="/">Home</a>
     </div>
   )
 }

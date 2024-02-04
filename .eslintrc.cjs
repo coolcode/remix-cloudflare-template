@@ -28,12 +28,7 @@ module.exports = {
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
       plugins: ["react", "jsx-a11y"],
-      extends: [
-        "plugin:react/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:react-hooks/recommended",
-        "plugin:jsx-a11y/recommended",
-      ],
+      extends: ["plugin:react/recommended", "plugin:react/jsx-runtime", "plugin:react-hooks/recommended", "plugin:jsx-a11y/recommended"],
       settings: {
         react: {
           version: "detect",
@@ -43,6 +38,18 @@ module.exports = {
           { name: "Link", linkAttribute: "to" },
           { name: "NavLink", linkAttribute: "to" },
         ],
+      },
+      rules: {
+        "no-unused-vars": ["warn"],
+        "no-unsafe-optional-chaining": ["off"],
+        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-leaked-render.md
+        "react/jsx-no-leaked-render": ["off"], // ["warn", { validStrategies: ["ternary"] },],
+        //https://bobbyhadz.com/blog/react-eslint-error-missing-in-props-validation
+        "react/prop-types": ["off"],
+        // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/1635dccc8106a774ae58010381771099664e32b4/docs/rules/click-events-have-key-events.md
+        "jsx-a11y/click-events-have-key-events": ["off"],
+        "jsx-a11y/no-static-element-interactions": ["off"],
+        "jsx-a11y/label-has-associated-control": ["off"],
       },
     },
 
@@ -62,11 +69,7 @@ module.exports = {
           },
         },
       },
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:import/recommended",
-        "plugin:import/typescript",
-      ],
+      extends: ["plugin:@typescript-eslint/recommended", "plugin:import/recommended", "plugin:import/typescript"],
     },
 
     // Node
@@ -77,4 +80,4 @@ module.exports = {
       },
     },
   ],
-};
+}

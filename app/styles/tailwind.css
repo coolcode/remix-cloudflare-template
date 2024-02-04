@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .button { @apply font-semibold py-2 px-4  border-2 border-gray-700 text-gray-700 rounded-sm } 
+  .primary { @apply text-green-500 hover:text-white hover:bg-green-500  border-green-500} 
+  .danger { @apply text-red-400 hover:text-white hover:bg-red-400  border-red-500 dark:text-red-500} 
+  .warn { @apply text-amber-500 hover:text-white hover:bg-amber-500 border-amber-500  } 
+  .secondary { @apply hover:text-white text-gray-700 border-gray-700 dark:text-gray-200 dark:bg-gray-700 dark:border-gray-200}
+  .link { @apply hover:cursor-pointer hover:text-primary-500 hover:border-primary-500 transition duration-300   }
+  .link-danger { @apply hover:cursor-pointer hover:text-red-500 transition duration-300  }
+  .highlight { @apply underline underline-offset-4 decoration-gray-500 decoration-wavy dark:decoration-gray-100 }
+  .badge { @apply py-0.5 px-1 border border-gray-700 rounded-md text-xs}
+  .indicator { @apply absolute -top-3 left-1/2 transform -translate-x-1/2 inline-flex items-center justify-center py-0.5 px-1.5 text-xs font-semibold text-white bg-red-400 border-2 border-white rounded-full }
+  .solid-primary { @apply bg-primary-500 text-white border-primary-500}
+  .label { @apply block font-semibold}
+  .text { @apply rounded-none border-b-2 border-gray-500 text-gray-700 py-1 px-2 bg-transparent dark:border-gray-200 dark:text-white focus:border-none}
+  .number { @apply rounded-none border-b-2 border-gray-500 text-gray-700 p-1 bg-transparent dark:border-white dark:text-white }
+  .textarea { @apply w-full border border-gray-500 mt-2 mr-2 p-2 text-gray-700 rounded-sm bg-transparent dark:border-white dark:text-white}
+  .table { @apply text-lg text-left font-medium text-gray-900 dark:text-white }
+  .th { @apply text-lg border-b-2 border-gray-500}
+  .tr { @apply text-sm border-b border-gray-500 }
+} 

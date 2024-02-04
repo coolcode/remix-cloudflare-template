@@ -10,12 +10,11 @@ export async function loader({ context, params }) {
 export default function UserDetail() {
   const user = useLoaderData()
   return (
-    <div>
-      <h1>User</h1>
+    <div className="flex flex-col space-y-4">
+      <h1 className="text-4xl">User #{user.id}</h1>
       <p>id: {user.id}</p>
       <p>name: {user.name}</p>
       <p>created: {user.created}</p>
-      <a href="/users">Users</a>
     </div>
   )
 }

@@ -4,11 +4,15 @@
 		"include": [
 			"*.js",
 			"*.jsx",
+			"*.ts",
+			"*.tsx",
 			"*.mjs",
 			"*.cjs"
 		],
 		"ignore": [
-			".netlify/**",
+			".netlify",
+			".cache",
+			".wrangler",
 			"node_modules",
 			"public",
 			"functions",
