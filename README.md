@@ -1,7 +1,6 @@
 # Remix Cloudflare Template
 
 - [Online Demo](https://remix-cloudflare-demo-1ag.pages.dev)
-
 - [Remix Docs](https://remix.run/docs)
 
 ## Development
@@ -9,6 +8,9 @@
 You will be utilizing Wrangler for local development to emulate the Cloudflare runtime. This is already wired up in your package.json as the `dev` script:
 
 ```sh
+# setup database
+wrangler d1 execute demo --local --file=./schema.sql
+
 # start the remix dev server and wrangler
 pnpm run dev
 ```
